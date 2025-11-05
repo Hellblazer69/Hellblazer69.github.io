@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#b00020" />
+  <title>In Case of Emergency – About Me</title>
+  <meta name="description" content="Compact, print‑ready ICE card with contacts, medical info, insurance and quick actions." />
+  <link rel="preconnect" href="https://placehold.co" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap" id="top">
+    <div class="banner" role="region" aria-label="Identity card">
+      <div class="idcard">
+        <div class="avatar" role="img" aria-label="Profile photo placeholder"></div>
+        <div>
+          <h1 class="name">Saba Kveselava</h1>
+          <div class="muted">DOB: 26-05-1999 · Blood Type: B+</div>
+          <div class="toolbar" role="toolbar" aria-label="Quick actions">
+            <button id="toggleEmergency" class="danger" type="button" aria-pressed="false">Emergency mode</button>
+            <a id="saveVcf" class="button" download="saba-kveselava.vcf" href="#">Save as vCard</a>
+            <button id="printBtn" class="button" type="button">Print</button>
+            <button id="copyURL" class="button ghost" type="button">Copy page link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" role="main">
+      <!-- LEFT: Contacts & Quick actions -->
+      <section class="card contacts" aria-labelledby="contacts-h2">
+        <h2 id="contacts-h2">Emergency contacts</h2>
+        <div class="contact">
+          <div>
+            <strong>Primary – Mariam Kharbedia</strong>
+            <div class="role">Girlfriend</div>
+            <div class="muted">Speaks English + Georgian</div>
+          </div>
+          <div>
+            <div><a class="button" href="tel:+995555372211" aria-label="Call primary contact">Call</a></div>
+          </div>
+          <div class="muted">Phone</div>
+          <div><a href="tel:+995555372211">+995 555 37 22 11</a></div>
+          <div class="muted">Email</div>
+          <div><a href="mailto:marika.kharbedia.95@gmail.com">marika.kharbedia.95@gmail.com</a></div>
+          <div class="muted">Address</div>
+          <div>37B Mirian Mepe St, Tbilisi</div>
+        </div>
+
+        <h2 style="margin-top:14px">Primary care &amp; Insurance</h2>
+        <div class="list">
+          <div class="item"><div class="k">Clinic</div><div class="v">Avoid cheap generic clinics; take me to a reputable facility</div></div>
+          <div class="item"><div class="k">Insurance</div><div class="v">Ardi: AVT 150643/1 <a href="tel:+995322101010">+995 32 210 10 10</a></div></div>
+        </div>
+
+        <div class="row" style="margin-top:12px">
+          <div class="qr">
+            <img id="qr" alt="QR code to this ICE page" src="" width="108" height="108" loading="lazy">
+            <div class="muted">Scan to open this page<br><small id="urlText"></small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Medical & Critical info -->
+      <section class="card" aria-labelledby="medical-h2">
+        <h2 id="medical-h2">Medical information</h2>
+        <div class="list" aria-describedby="disclaimer">
+          <div class="item"><div class="k">Conditions</div><div class="v">Intracranial pressure, Non‑Alcoholic Fatty Liver Disease, Second metatarsal fracture</div></div>
+          <div class="item"><div class="k">Allergies</div><div class="v"><span class="pill warn">NONE</span></div></div>
+          <div class="item"><div class="k">Medications</div><div class="v"><span class="pill warn">NONE</span></div></div>
+          <div class="item"><div class="k">Implants</div><div class="v"><span class="pill warn">NONE</span></div></div>
+          <div class="item"><div class="k">Religion/Prefs</div><div class="v"><span class="pill warn">NONE</span></div></div>
+          <div class="item"><div class="k">Languages</div><div class="v">English, Georgian</div></div>
+        </div>
+
+        <h2 style="margin-top:14px">Documents</h2>
+        <div class="list">
+          <div class="item"><div class="k">ID</div><div class="v"><a href="#" title="Link your ID scan (PDF)">Passport scan (PDF)</a></div></div>
+          <div class="item"><div class="k">Vaccines</div><div class="v"><a href="#" title="Immunization record">Immunization record</a></div></div>
+        </div>
+
+        <p id="disclaimer" class="muted" style="margin-top:12px">If unconscious, use the primary contact and notify the listed insurance. This page is informational and not a medical directive.</p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      Last updated <time id="updated" datetime="">—</time>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
