@@ -1,199 +1,142 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#dc2626" />
-  <title>Emergency Information – Saba Kveselava</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <!-- Header Section -->
-    <header class="header">
-      <span class="emergency-badge">⚠️ Emergency Information </span> 
-      <div class="profile">
-        <div class="avatar"></div>
-        <div class="profile-info">
-          <h1 class="name">Saba Kveselava</h1>
-          <div class="profile-meta">
-            <span>Date Of Birth: May 26, 1999</span> 
-            <span>Blood Type: <strong>B+</strong></span>
-            <span>Height: <strong>180</strong></span>
-            <span>Weight: <strong>110</strong></span>
-          </div>
-        </div>
-        <button id="printBtn" class="btn btn-outline">
-            🖨️ Print
-          </button>
-      </div>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0b1226" />
+    <title>Emergency Info – Saba Kveselava</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- LEFT COLUMN (not sticky) -->
+      <aside class="left-col" aria-labelledby="person-heading">
+        <!-- Identity -->
+        <section class="id-card">
+            <div class="avatar" aria-hidden="true"
+            style="background-image:url('assets/pf.jpeg');">
+       </div>
+          <h1 id="person-heading" class="name">Saba Kveselava</h1>
 
-    <!-- Main Content Grid -->
-    <div class="grid">
-      <!-- Left Column: Contacts -->
-      <section class="card">
-        <h2 class="card-title">
-          <span class="icon">📞</span>
-          Emergency Contacts
-        </h2>
-        
-        <div class="contact-card primary">
-          <div class="contact-header">
-            <div>
-              <h3 class="contact-name">Mariam Kharbedia</h3>
-              <p class="contact-role">Girlfriend · Primary Contact</p>
-              <p class="contact-language">Speaks English + Georgian</p>
-            </div>
-            <a href="tel:+995555372211" class="btn btn-primary btn-call">
-              📱 Call Now
+          <ul class="meta" aria-label="Personal details">
+            <li class="pill"><span class="k">DOB 🎂</span><span class="v">May 26, 1999</span></li>
+            <li class="pill"><span class="k">PID 🪪</span><span class="v">29001039222</span></li>
+            <li class="pill"><span class="k">Phone 📱</span><span class="v">+995 551 17 55 01</span></li>
+            <li class="pill"><span class="k">Blood Type 🩸</span><span class="v">B+</span></li>
+            <li class="pill"><span class="k">Height</span><span class="v">180</span></li>
+            <li class="pill"><span class="k">Weight</span><span class="v">110</span></li>
+          </ul>
+        </section>
+
+        <!-- Documents -->
+        <section class="card" aria-labelledby="docs-title">
+          <h2 id="docs-title" class="card-title">
+            <span class="icon" aria-hidden="true">📄</span>Documents
+          </h2>
+          <div class="docs">
+            <a href="#" class="doc">
+              <span class="doc-ico" aria-hidden="true">🆔</span>
+              <div>
+                <div class="doc-title">Passport Scan</div>
+                <div class="doc-sub">Identity document (PDF)</div>
+              </div>
+            </a>
+            <a href="#" class="doc">
+              <span class="doc-ico" aria-hidden="true">💉</span>
+              <div>
+                <div class="doc-title">Immunization Record</div>
+                <div class="doc-sub">Vaccination history</div>
+              </div>
             </a>
           </div>
-          <div class="contact-details">
-            <div class="detail-row">
-              <span class="detail-label">Phone</span>
-              <a href="tel:+995555372211" class="detail-value">+995 555 37 22 11</a>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Email</span>
-              <a href="mailto:marika.kharbedia.95@gmail.com" class="detail-value">marika.kharbedia.95@gmail.com</a>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label">Address</span>
-              <span class="detail-value">37B Mirian Mepe St, Tbilisi</span>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="contact-card primary">
-            <div class="contact-header">
+        <p class="note">
+          Last updated: <span id="lastUpdated"></span><br />
+        </p>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="right-col" aria-live="polite">
+        <!-- Emergency Contacts -->
+        <section class="card">
+          <h2 class="card-title"><span class="icon" aria-hidden="true">📞</span>Emergency Contacts</h2>
+
+          <article class="contact">
+            <div class="contact-head">
+              <div>
+                <h3 class="contact-name">Mariam Kharbedia</h3>
+                <p class="contact-role">Girlfriend · Primary Contact</p>
+                <p class="contact-lang">Speaks English + Georgian</p>
+              </div>
+              <a class="btn btn-primary" href="tel:+995555372211" aria-label="Call Mariam Kharbedia">📞 Call</a>
+            </div>
+            <div class="contact-grid">
+              <div class="row">
+                <span class="label">Phone</span>
+                <a class="value" href="tel:+995555372211">+995 555 37 22 11</a>
+              </div>
+              <div class="row">
+                <span class="label">Email</span>
+                <a class="value" href="mailto:marika.kharbedia.95@gmail.com">marika.kharbedia.95@gmail.com</a>
+              </div>
+              <div class="row">
+                <span class="label">Address</span>
+                <span class="value">37B Mirian Mepe St, Tbilisi</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="contact">
+            <div class="contact-head">
               <div>
                 <h3 class="contact-name">Tatia Gotsiridze</h3>
                 <p class="contact-role">Friend · Secondary Contact</p>
-                <p class="contact-language">Speaks English + Georgian</p>
+                <p class="contact-lang">Speaks English + Georgian</p>
               </div>
-              <a href="tel:+995555372211" class="btn btn-primary btn-call">
-                📱 Call Now
-              </a>
+              <a class="btn btn-primary" href="tel:+995555372211" aria-label="Call Tatia Gotsiridze">📞 Call</a>
             </div>
-            <div class="contact-details">
-              <div class="detail-row">
-                <span class="detail-label">Phone</span>
-                <a href="tel:+995555372211" class="detail-value">+995 555 37 22 11</a>
+            <div class="contact-grid">
+              <div class="row">
+                <span class="label">Phone</span>
+                <a class="value" href="tel:+995555372211">+995 555 37 22 11</a>
               </div>
-              <div class="detail-row">
-                <span class="detail-label">Email</span>
-                <a href="" class="detail-value"></a>
-              </div>
-              <div class="detail-row">
-                <span class="detail-label">Address</span>
-                <span class="detail-value">13 Samghereti St</span>
+              <div class="row">
+                <span class="label">Address</span>
+                <span class="value">13 Samghereti St</span>
               </div>
             </div>
-          </div>
+          </article>
+        </section>
 
-        <h2 class="card-title" style="margin-top: 24px;">
-          <span class="icon">🏥</span>
-          Healthcare Information
-        </h2>
-        
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="info-label">Primary Care</span>
-            <span class="info-value">Don't take to generic clinic</span>
-          </div> 
-          <div class="info-item">
-            <span class="info-label">Insurance</span>
-            <span class="info-value">
-                <span class="detail-label">Company: </span> <a href="https://www.ardi.ge/ge">Ardi</a>  <br>
-                <span class="detail-label">Policy #: </span> AVT 150643/1<br>
-             <span class="detail-label">Phone: </span> <a href="tel:+995322101010">+995 32 2101010</a>
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Right Column: Medical Info -->
-      <section class="card">
-        <h2 class="card-title">
-          <span class="icon">💊</span>
-          Medical Information
-        </h2>
-
-        <div class="medical-grid">
-          <div class="medical-item">
-            <span class="medical-label">Medical Conditions</span>
-            <span class="medical-value">
-            ‣ Intracranial pressure<br>
-            ‣ Non-Alcoholic Fatty Liver Disease<br>
-            ‣ Second metatarsal fracture
-            </span>
-          </div>
-
-          <div class="medical-item">
-            <span class="medical-label">Allergies</span>
-            <span class="badge badge-safe">✓ None</span>
-          </div>
-
-          <div class="medical-item">
-            <span class="medical-label">Current Medications</span>
-            <span class="badge badge-safe">✓ None</span>
-          </div>
-
-          <div class="medical-item">
-            <span class="medical-label">Implants/Devices</span>
-            <span class="badge badge-safe">✓ None</span>
-          </div>
-
-          <div class="medical-item">
-            <span class="medical-label">Religious Restrictions</span>
-            <span class="badge badge-safe">✓ None</span>
-          </div>
-
-          <div class="medical-item">
-            <span class="medical-label">Languages</span>
-            <span class="medical-value">English, Georgian</span>
-          </div>
-        </div>
-
-        <h2 class="card-title" style="margin-top: 24px;">
-          <span class="icon">📄</span>
-          Documents
-        </h2>
-
-        <div class="documents-list">
-          <a href="#" class="document-link">
-            <span class="doc-icon">🆔</span>
-            <div>
-              <div class="doc-title">Passport Scan</div>
-              <div class="doc-subtitle">Identity document (PDF)</div>
+        <!-- Medical Information -->
+        <section class="card">
+          <h2 class="card-title"><span class="icon" aria-hidden="true">💊</span>Medical Information</h2>
+          <div class="medical">
+            <div class="pane">
+              <h3 class="subheading">Conditions</h3>
+              <ul class="clean-list">
+                <li>Intracranial pressure</li>
+                <li>Non-Alcoholic Fatty Liver Disease</li>
+                <li>Second metatarsal fracture</li>
+              </ul>
             </div>
-          </a>
-          <a href="#" class="document-link">
-            <span class="doc-icon">💉</span>
-            <div>
-              <div class="doc-title">Immunization Record</div>
-              <div class="doc-subtitle">Vaccination history</div>
+            <div class="pane">
+              <h3 class="subheading">Status</h3>
+              <ul class="clean-list">
+                <li><span class="muted">Allergies:</span> <span class="none-badge">None</span></li>
+                <li><span class="muted">Medications:</span> <span class="none-badge">None</span></li>
+                <li><span class="muted">Implants/Devices:</span> <span class="none-badge">None</span></li>
+                <li><span class="muted">Religious Restrictions:</span> <span class="none-badge">None</span></li>
+                <li><span class="muted">Languages:</span> English, Georgian</li>
+              </ul>
             </div>
-          </a>
-          <a href="#" id="downloadVcf" class="document-link">
-            <span class="doc-icon">📇</span>
-            <div>
-              <div class="doc-title">Download vCard</div>
-              <div class="doc-subtitle">Save contact to phone</div>
-            </div>
-          </a>
-        </div>
-      </section>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Last updated: <span id="lastUpdated"></span></p>
-      <p>In case of emergency, call local emergency services first: <strong>112</strong></p>
-    </footer>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
