@@ -227,7 +227,8 @@
   .subheading{font-size:var(--fs-sub);text-transform:uppercase;letter-spacing:.8px;color:var(--t2);font-weight:900;margin-bottom:10px}
   .clean-list{list-style:disc;margin:0;padding-left:1.1rem;display:grid;gap:8px;font-size:var(--fs-body);line-height:1.7}
   .clean-list li::marker{color:#94a3b8}
-  .muted{color:var(--t2);font-weight:900}
+  .muted{color:var(--t2);font-weight:900;}
+
   
   /* ===== Note ===== */
   .note{
